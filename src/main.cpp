@@ -18,5 +18,8 @@ int main() {
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
+  std::cout << "saving record..." << std::endl;
+  game.SavePlayerInfo();
+  std::cout << "record is saved" << std::endl;
   return 0;
 }

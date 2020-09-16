@@ -18,7 +18,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
-
+  GetPlayerInfo();
   while (running) {
     frame_start = SDL_GetTicks();
 
@@ -63,6 +63,25 @@ void Game::PlaceFood() {
       return;
     }
   }
+}
+void Game::GetPlayerInfo(){
+  std::cout<<"please input your name"<<std::endl;
+  std::cin>>_userName;
+  std::cout<<"Hello,"<<_userName<<std::endl;
+}
+void Game::SavePlayerInfo(){
+  std::ofstream outfile;
+  // process the saving message
+  std::string line, score_str, size_str;
+  score_str = std::to_string(GetScore());
+  size_str = std::to_string(GetSize());
+  line = _userName+", Score:"+score_str+", Size:"+size_str+"\n";
+  
+  // append individual game info to the record.txt file
+  outfile.open("../record_text/record.txt",std::ios_base::app); //append the file
+  outfile << line;
+  outfile.close();
+
 }
 
 void Game::Update() {
