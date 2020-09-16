@@ -1,3 +1,6 @@
 
 xix, Score:0, Size:1
 , Score:0, Size:1
+ff, Score:1, Size:2
+ww, Score:0, Size:1
+ggggg, Score:0, Size:1
