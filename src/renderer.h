@@ -14,8 +14,12 @@ class Renderer {
   void Render(Snake const snake, SDL_Point const &food);
   void UpdateWindowTitle(int score, int fps);
 
+  Renderer(Renderer &source);
+  Renderer &operator = (Renderer &source);
+  Renderer(Renderer &&source);
+  Renderer &operator = (Renderer &&source);
  private:
-  SDL_Window *sdl_window;
+  SDL_Window *sdl_window ;
   SDL_Renderer *sdl_renderer;
 
   const std::size_t screen_width;

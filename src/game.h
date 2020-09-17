@@ -10,6 +10,7 @@
 class Game {
  public:
   Game(std::size_t grid_width, std::size_t grid_height);
+  ~Game();
   void Run(Controller const &&controller, Renderer &&renderer,
            std::size_t target_frame_duration);
   int GetScore() const;
@@ -25,7 +26,7 @@ class Game {
   std::uniform_int_distribution<int> random_h;
   
   int score{0};
-  std::string _userName;
+  std::string *_userName;
   void PlaceFood();
   void Update();
   void GetPlayerInfo();

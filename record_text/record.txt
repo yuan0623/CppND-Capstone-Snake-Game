@@ -4,3 +4,6 @@ xix, Score:0, Size:1
 ff, Score:1, Size:2
 ww, Score:0, Size:1
 ggggg, Score:0, Size:1
+e, Score:3, Size:4
+dd, Score:2, Size:3
+d, Score:1, Size:2

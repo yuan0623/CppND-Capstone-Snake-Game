@@ -37,6 +37,25 @@ Renderer::~Renderer() {
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
 }
+Renderer::Renderer(Renderer &source):
+    screen_width(source.screen_width),
+      screen_height(source.screen_height),
+      grid_width(source.grid_width),
+      grid_height(source.grid_height)
+{
+  std::cout <<"copy constructor"<<std::endl;
+
+}
+
+Renderer::Renderer(Renderer &&source):
+    screen_width(source.screen_width),
+      screen_height(source.screen_height),
+      grid_width(source.grid_width),
+      grid_height(source.grid_height)
+{
+  std::cout <<"move constructor"<<std::endl;
+
+}
 
 void Renderer::Render(Snake const snake, SDL_Point const &food) {
   SDL_Rect block;

@@ -9,8 +9,10 @@ In this submission, I have addressed following ruburc points:
 * The project reads data from a file andprocess the data, or the program writes data to a file (***see game.cpp, line 72-85***)
   * in this program, the user's name, score and the size of the snake will be write into record.txt file.
 * The project uses move semantics to move data, instead of copying it, where possible
-  ** in this program I move the `Controller`, `Renderer` object into the `Game::Run()` method (see ***see main.cpp, line 17***)
-
+  * in this program I move the `Controller`, `Renderer` object into the `Game::Run()` method (see ***see main.cpp, line 17***)
+* the project makes use destructor appropriately
+  * in this program, I have implemented a destrctor in `game.h` and `game.cpp`, the destctor free the heap memory `_userName`
+  
 <img src="snake_game.gif"/>
 
 

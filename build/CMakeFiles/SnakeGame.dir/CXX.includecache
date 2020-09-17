@@ -10,6 +10,14 @@
 snake.h
 /Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/snake.h
 
+/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/game.cpp
+game.h
+/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/game.h
+iostream
+-
+SDL.h
+/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/SDL.h
+
 /Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/game.h
 random
 -
@@ -23,16 +31,6 @@ snake.h
 /Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/snake.h
 fstream
 -
-
-/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/main.cpp
-iostream
--
-controller.h
-/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/controller.h
-game.h
-/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/game.h
-renderer.h
-/Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/renderer.h
 
 /Users/yuangao/Dropbox/Udacity_ND/Cpp/CppND-Capstone-Snake-Game/src/renderer.h
 vector

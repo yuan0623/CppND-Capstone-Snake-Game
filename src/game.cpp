@@ -7,9 +7,13 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       engine(dev()),
       random_w(0, static_cast<int>(grid_width)),
       random_h(0, static_cast<int>(grid_height)) {
+        _userName = (std::string *)malloc(sizeof(std::string));
   PlaceFood();
 }
-
+Game::~Game(){
+  std::cout<<"destructor is called"<<std::endl;
+  free(_userName);
+}
 void Game::Run(Controller const &&controller, Renderer &&renderer,
                std::size_t target_frame_duration) {
   Uint32 title_timestamp = SDL_GetTicks();
@@ -66,8 +70,9 @@ void Game::PlaceFood() {
 }
 void Game::GetPlayerInfo(){
   std::cout<<"please input your name"<<std::endl;
-  std::cin>>_userName;
-  std::cout<<"Hello,"<<_userName<<std::endl;
+  
+  std::cin>>*_userName;
+  std::cout<<"Hello,"<<*_userName<<std::endl;
 }
 void Game::SavePlayerInfo(){
   std::ofstream outfile;
@@ -75,7 +80,7 @@ void Game::SavePlayerInfo(){
   std::string line, score_str, size_str;
   score_str = std::to_string(GetScore());
   size_str = std::to_string(GetSize());
-  line = _userName+", Score:"+score_str+", Size:"+size_str+"\n";
+  line = *_userName+", Score:"+score_str+", Size:"+size_str+"\n";
   
   // append individual game info to the record.txt file
   outfile.open("../record_text/record.txt",std::ios_base::app); //append the file
