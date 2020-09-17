@@ -3,6 +3,8 @@
 This is my submission for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
 
 In this submission, I have addressed following ruburc points:
+* the project demonstrates an understanding of c++ functions and control structures
+  * in this project, I add additional function to the original SNAKE project, all my implementations are organized into functions. 
 * The project accepts user input and process the input (***see game.cpp, line 67-71***)
   * in this program, the user need to input their name to get the game started.
   * then, a welcome message is generated in the console as a step to process the input.
